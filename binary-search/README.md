@@ -65,3 +65,31 @@ because of **low = high** we break the loop and check the result
 **array[low] = 8**
 
 Hooray! We found it.  
+
+### Time Complexity
+
+We found the number for 3 iterations.
+
+At **1st** iteration length of array is **n**
+
+At **2nd** iteration length of array is **n/2**
+
+At **3rd** iteration length of array is **(n/2)/2**
+
+Therefore, after iteration **k** length of array is **n⁄2k**
+
+Also, we know that after **k** divisions, the length of array becomes **1**
+
+That means length of array = **n⁄2k = 1** and **n = 2k**
+
+Every iteration we divide **n** by **2** so we can calculate the complexity using the logarithm to the base **2** 
+
+``` 
+=> log2 (n) = log2 (2k)
+=> log2 (n) = k log2 (2)
+as (loga (a) = 1)
+=> k = log2 (n)
+```
+Using **Big O** notation we can represent this complexity as **O(log n)**
+
+
